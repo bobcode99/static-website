@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Text Size</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Change Text Size</h1>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+
+    <p>
+      This is some sample text. Click the button below to change the text size.
+    </p>
+    <button id="changeSizeButton">Change Text Size</button>
+
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2113" alt="Kitten" /></p>
+
+    <script type="module">
+    //         import {onCLS, onFID, onLCP} from 'https://unpkg.com/web-vitals@3?module';
+
+    // onCLS(console.log);
+    // onFID(console.log);
+    // onLCP(console.log);
+
+        import { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } from 'https://unpkg.com/web-vitals@3?module';
+
+
+        onCLS(console.log);
+        onFID(console.log);
+        onLCP(console.log);
+        onFCP(console.log);
+        onTTFB(console.log);
+        onINP(console.log);
+
+      function changeTextSize() {
+        const paragraph = document.querySelector("p");
+        const currentSize = parseInt(window.getComputedStyle(paragraph).getPropertyValue("font-size"));
+        paragraph.style.fontSize = `${currentSize + 2}px`;
+      }
+
+      const changeSizeButton = document.getElementById("changeSizeButton");
+      changeSizeButton.addEventListener("click", changeTextSize);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Move Box</title>
+    <style>
+      #box {
+        width: 250px;
+        height: 250px;
+        position: relative;
+      }
+      #box1 {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        background-color: gold;
+        left: 1000px;
+      }
+      #image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+		}
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2160" alt="Kitten" /></p>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/380/160" alt="Kitten" /></p>
+
+    <div id="box3"></div>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/381/160" alt="Kitten" /></p>
+
+    <div id="box4"></div>
+
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/380/260" alt="Kitten1" /></p>
+
+    </header>
+    <img src="https://via.placeholder.com/2703x1500" alt="Placeholder Image">
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/381/261" alt="Kitten" /></p>
+
+    <footer>
+        <p>&copy; My Website 2023</p>
+    </footer>
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://unpkg.com/web-vitals@3/dist/web-vitals.iife.js";
+        script.onload = function () {
+          // When loading `web-vitals` using a classic script, all the public
+          // methods can be found on the `webVitals` global namespace.
+          webVitals.onCLS(console.log);
+          webVitals.onFID(console.log);
+          webVitals.onLCP(console.log);
+        };
+        document.head.appendChild(script);
+      })();
+ 
+      function moveBox(boxMove) {
+			const height = window.innerHeight - boxMove.clientHeight;
+			const width = window.innerWidth - boxMove.clientWidth;
+			const top = Math.floor(Math.random() * height);
+			const left = Math.floor(Math.random() * width);
+			boxMove.style.top = top + 'px';
+			boxMove.style.left = left + 'px';
+			boxMove.style.backgroundColor = getRandomColor();
+		}
+
+		function getRandomColor() {
+			return '#' + Math.floor(Math.random()*16777215).toString(16);
+		}
+
+        const box = document.getElementById('box');
+        const box1 = document.getElementById('box1');
+
+		setInterval(function() {
+			moveBox(box);
+			moveBox(box1);
+		}, 500);
+
+      
+   
+    </script>
+  </body>
+</html>

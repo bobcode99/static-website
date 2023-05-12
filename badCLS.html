@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bad CLS Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <img src="https://via.placeholder.com/2001x1500" alt="Placeholder Image">
+    <img src="https://via.placeholder.com/2003x1500" alt="Placeholder Image">
+    <img src="https://via.placeholder.com/2002x1500" alt="Placeholder Image">
+    <img src="https://via.placeholder.com/2012x1500" alt="Placeholder Image">
+    <img src="https://via.placeholder.com/2023x1500" alt="Placeholder Image">
+    <img src="https://via.placeholder.com/202x1500" alt="Placeholder Image">
+
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="https://via.placeholder.com/2063x1500" alt="Placeholder Image">
+    <img src="https://via.placeholder.com/2703x1500" alt="Placeholder Image">
+
+    <div>
+        <img src="https://via.placeholder.com/2003x1500" alt="Placeholder Image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl id varius iaculis, urna odio mollis odio, at cursus quam enim a lorem. Fusce ut faucibus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Sed vel diam vel libero vulputate ultrices vel vitae ex. Nunc nec nulla ac mi volutpat blandit.</p>
+    </div>
+    <p><img style="max-width: 360px" src="https://placekitten.com/g/3840/2160" alt="Kitten" /></p>
+
+    <footer>
+        <p>&copy; My Website 2023</p>
+    </footer>
+    <script type="module">
+         import { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } from 'https://unpkg.com/web-vitals@3?module';
+
+        onCLS(console.log);
+        onFID(console.log);
+        onLCP(console.log);
+        onFCP(console.log);
+        onTTFB(console.log);
+        onINP(console.log);
+    </script>
+</body>
+</html>
