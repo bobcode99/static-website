@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <!-- Ref: https://blog.csdn.net/weixin_41998371/article/details/115275100 -->
+    <h1>Test isTrusted status</h1>
+    <h2 id="checkIsTrusted">isTrusted value:</h2>
+    <button type="button" name="bt" id="bt">clickMe</button>
+  </body>
+  <script>
+    document.querySelector("#bt").addEventListener("click", function (event) {
+      console.log("isTrusted value: ", event.isTrusted);
+      document.getElementById("checkIsTrusted").innerHTML =
+        "isTrusted value: " + event.isTrusted;
+    });
+  </script>
+</html>
