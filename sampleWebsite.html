@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample website</title>
+  </head>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  </style>
+
+  <body>
+    <!-- Ref: https://github.com/SideeX/example/tree/main/webpage_under_test 
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog -->
+
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et eros
+      laoreet urna pretium facilisis at lacinia tellus. Nam lobortis vitae nisl
+      vitae volutpat. Suspendisse eleifend ipsum vitae justo lacinia,
+      condimentum mattis erat condimentum. Morbi sed tellus metus. Phasellus
+      ornare, enim quis pulvinar tempor, risus turpis scelerisque felis, sed
+      ullamcorper leo urna at nisi. Pellentesque eget turpis congue, ornare
+      purus nec, euismod enim. In malesuada elementum sagittis. Sed a diam
+      aliquet eros egestas elementum. Quisque vel dapibus erat. Morbi posuere
+      nisl sit amet massa pharetra scelerisque. Vestibulum vel neque nec augue
+      sodales ultricies. Pellentesque vitae erat erat. Nunc quis lectus felis.
+      Praesent in risus ultricies felis semper sagittis at vel neque. Quisque
+      vehicula dignissim laoreet. Proin quis accumsan mauris, id ornare nibh. Ut
+      lacinia convallis ipsum ac consequat. Mauris in sollicitudin arcu, lacinia
+      tristique orci. Ut efficitur imperdiet lectus, a auctor sapien pulvinar
+      maximus. Nunc posuere tristique tristique. Nunc blandit mauris nisi, quis
+      aliquam dui rhoncus vitae. Integer aliquam fringilla mauris, vel viverra
+      diam ornare quis. Sed aliquet eleifend nisl, non posuere tortor maximus
+      eu. Nulla dapibus ornare dolor. Orci varius natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. Nullam et feugiat urna,
+      mollis euismod velit. In tincidunt tortor eu nunc porttitor, viverra
+      rutrum nisl vulputate. Ut est nisl, pellentesque vitae dui sit amet,
+      venenatis dictum nibh. Aliquam volutpat mauris quam. Fusce vel erat
+      ultrices, consectetur massa id, sagittis nisi. Morbi rhoncus rhoncus
+      lectus a luctus. Praesent ac nisl dui. Mauris sagittis consequat placerat.
+      Proin sollicitudin velit libero, at congue dolor feugiat at. Integer ut
+      imperdiet urna. Curabitur ut nisi sagittis felis vehicula consectetur sed
+      condimentum arcu. Proin vitae arcu accumsan, imperdiet mi ut, egestas
+      libero. Nam non risus luctus, fringilla justo in, lobortis nisi. Duis
+      feugiat, ante id facilisis porta, sem sem cursus ipsum, elementum
+      fermentum magna magna vel sem. Nam ut lobortis mauris. Vivamus mi neque,
+      tincidunt a bibendum in, gravida quis mi. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Ut facilisis in metus nec gravida.
+      Pellentesque vitae augue erat. Phasellus sed condimentum justo. Praesent
+      et nulla turpis. Cras vestibulum pharetra arcu eget blandit. Mauris vitae
+      augue a neque ultrices pharetra eget at nisl. Etiam metus neque, dapibus a
+      nibh auctor, ullamcorper ultrices nisi. Maecenas nec est non justo
+      vulputate dignissim in vitae est. Pellentesque elit est, tempor quis
+      efficitur in, porta eget turpis. Vivamus a felis et lacus bibendum
+      volutpat vitae a turpis. Vestibulum eget nibh magna. Vivamus at vehicula
+      mi. Phasellus aliquam rutrum libero. Quisque vitae commodo quam. Fusce
+      posuere convallis lectus, eu venenatis purus tempor quis.
+    </p>
+    <h1>Dialog</h1>
+    <div>
+      <!-- A modal dialog containing a form -->
+      <dialog id="favDialog" `>
+        <form>
+          <p>
+            <label
+              >Favorite animal:
+              <select>
+                <option value="default">Choose…</option>
+                <option>Brine shrimp</option>
+                <option>Red panda</option>
+                <option>Spider monkey</option>
+              </select>
+            </label>
+          </p>
+          <div>
+            <button value="cancel" formmethod="dialog">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </div>
+        </form>
+      </dialog>
+      <p>
+        <button id="showDialog">Show the dialog</button>
+      </p>
+      <output></output>
+    </div>
+
+    <h1>Date range color sample</h1>
+    <div>
+      <label for="color">Color:</label>
+      <input type="color" id="color" name="color" />
+      <br />
+      <br />
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" />
+      <br />
+      <br />
+      <label for="datetime-local">Datetime-local:</label>
+      <input type="datetime-local" id="datetime-local" name="datetime-local" />
+      <br />
+      <br />
+      <label for="month">Month:</label>
+      <input type="month" id="month" name="month" />
+      <br />
+      <br />
+      <label for="range">Range:</label>
+      <input type="range" id="range" name="range" />
+      <br />
+      <br />
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" />
+      <br />
+      <br />
+      <label for="week">Week:</label>
+      <input type="week" id="week" name="week" />
+      <br />
+      <br />
+    </div>
+
+    <h2>Radio Buttons</h2>
+    <input type="radio" id="option1" name="radio" value="option1" />
+    <label for="option1">Option 1</label><br />
+    <input type="radio" id="option2" name="radio" value="option2" />
+    <label for="option2">Option 2</label><br />
+    <input type="radio" id="option3" name="radio" value="option3" />
+    <label for="option3">Option 3</label><br />
+
+    <h3>Table</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Alice</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>35</td>
+      </tr>
+    </table>
+
+    <h4>Textboxes</h4>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" /><br />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" /><br />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" /><br />
+
+    <h5>Buttons</h5>
+    <button type="button">Click Me</button>
+    <input type="submit" value="Submit" />
+    <button
+      title="I have title"
+      id="Button"
+      style="background-color: white"
+      onclick="changeColor('Button')"
+    >
+      Click me to change color
+    </button>
+
+    <h6>Checkboxes</h6>
+    <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" />
+    <label for="checkbox1">Checkbox 1</label><br />
+
+    <input type="checkbox" id="checkbox2" name="checkbox2" value="option2" />
+    <label for="checkbox2">Checkbox 2</label><br />
+
+    <input type="checkbox" id="checkbox3" name="checkbox3" value="option3" />
+    <label for="checkbox3">Checkbox 3</label><br />
+
+    <h1>Button Click Counter</h1>
+    <p>Click the button to increase the count:</p>
+    <button onclick="handleClick()">Click me</button>
+    <p>Click count: <span id="count">0</span></p>
+  </body>
+
+  <script>
+    const showButton = document.getElementById("showDialog");
+    const favDialog = document.getElementById("favDialog");
+    const outputBox = document.querySelector("output");
+    const selectEl = favDialog.querySelector("select");
+    const confirmBtn = favDialog.querySelector("#confirmBtn");
+
+    // "Show the dialog" button opens the <dialog> modally
+    showButton.addEventListener("click", () => {
+      favDialog.showModal();
+    });
+
+    // "Favorite animal" input sets the value of the submit button
+    selectEl.addEventListener("change", (e) => {
+      confirmBtn.value = selectEl.value;
+    });
+
+    // "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
+    favDialog.addEventListener("close", (e) => {
+      outputBox.value =
+        favDialog.returnValue === "default"
+          ? "No return value."
+          : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+    });
+
+    // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+    confirmBtn.addEventListener("click", (event) => {
+      event.preventDefault(); // We don't want to submit this fake form
+      favDialog.close(selectEl.value); // Have to send the select box value here.
+    });
+
+    var pauseCount = 0;
+
+    function changeColor(id) {
+      if (pauseCount == 1) {
+        document.getElementById(id).style.backgroundColor = "white";
+        pauseCount--;
+      } else if (pauseCount == 0) {
+        document.getElementById(id).style.backgroundColor = "pink";
+        pauseCount++;
+      }
+    }
+
+    // Function to handle button click event
+    function handleClick() {
+      // Get the current click count from the text view
+      var count = parseInt(document.getElementById("count").innerText);
+
+      // Increment the click count
+      count++;
+
+      // Update the text view with the new click count
+      document.getElementById("count").innerText = count;
+    }
+  </script>
+</html>
